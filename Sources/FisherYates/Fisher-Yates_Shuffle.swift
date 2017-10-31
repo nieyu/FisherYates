@@ -1,4 +1,3 @@
-
 #if swift(>=2.2) && !swift(>=3.0)
     public typealias Colletion = ColletionType
     
