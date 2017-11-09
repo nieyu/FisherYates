@@ -18,15 +18,15 @@ public extension Collection {
     }
 }
 
-public extension MutableCollecion where Index == Int, IndexDistance == Int {
+public extension MutableCollection where Index == Int, IndexDistance == Int {
     mutating func shuffle() {
         guard count > 1 else { return }
         
         for i in 0..<count - 1 {
-            let j = random(count -i) + i
+            let j = random(count - i) + i
             guard i != j else { continue }
             #if swift(>=4.0)
-                swap(i, j)
+                swapAt(i, j)
             #else
                 swap(&self[i], &self[j])
             #endif

@@ -1,7 +1,7 @@
 #if os(OSX)
     import Darwin
     
-    public let random: (Int) -> Int = { Int(arc4random_uniform(Uint32($0))) }
+    public let random: (Int) -> Int = { Int(arc4random_uniform(UInt32($0))) }
 #else
     import Glibc
     
