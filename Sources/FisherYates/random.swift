@@ -1,4 +1,4 @@
-#if os(OSX)
+#if os(OSX) || os(iOS)
     import Darwin
     
     public func random<T: BinaryInteger>(_ n: T) -> T {
